@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 const Context = React.createContext();
 
 export class Provider extends Component {
   state = {
     tunes_list: [
-      { tune: {tune_name:'tune name'}},
-      { tune: {tune_name:'tune name'}}
+      
     ],
     heading: 'Top 10 Tunes'
   };
+
+componentDidMount() {
+  axios.get()
+  .then(res => console.log(res.data))
+  .catch(err => console.log(err));
+}
+
   render() {
     return (
       <Context.Provider value={this.state}>
