@@ -7,15 +7,16 @@ import Loading from '../layout/Loading';
     return (
       <Consumer>
         {value => {
-          const { track_list } = value;
-          if(track_list === undefined || track_list.length === 0) {
-             return <Loading />
+          console.log(value);
+          const { tunes_list } = value;
+          if(tunes_list === undefined || tunes_list.length === 0) {
+             return <Loading />;
           } else {
-            return <h1>Tunes loaded...</h1>
+            return <h1>Tunes loaded...</h1>;
           }
         }}
       </Consumer>
-    )
+    );
   }
 }
 

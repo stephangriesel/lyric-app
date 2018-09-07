@@ -6,7 +6,7 @@ export default () => {
         <div>
             <img src={loading}
             alt="Loading..."
-            style={{width:'200px',margin: ' 40px auto', display: 'block' }}
+            style={{width:'150px',margin: ' 40px auto', display: 'block' }}
             />
         </div>
     );
