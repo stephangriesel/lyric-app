@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Loading from "../layout/Loading";
 
 class Lyrics extends Component {
@@ -47,18 +47,26 @@ class Lyrics extends Component {
     } else {
       // Test: return <h1>Test</h1>;
       return (
-          <React.Fragment>
-              <Link to="/" className="btn btn-light btn-sm mb-4">Back</Link>
-              <div className="card">
-              <h3 className="card-header">
-              {track.track_name} by {''}
+        <React.Fragment>
+          <Link to="/" className="btn btn-light btn-sm mb-4">
+            Back
+          </Link>
+          <div className="card">
+            <h3 className="card-header">
+              {track.track_name} by {""}
               <span className="text-secondary">{track.artist_name}</span>
-              </h3>
-              <div className="card-body">
+            </h3>
+            <div className="card-body">
               <p className="card-text">{lyrics.lyrics_body}</p>
-              </div>
-              </div>
-          </React.Fragment>
+            </div>
+          </div>
+
+          <ul className="list-group mt-3">
+              <li className="list-group-item">
+                  <strong>Release Date</strong>: {track.first_release_date}
+              </li>
+          </ul>
+        </React.Fragment>
       );
     }
   }
