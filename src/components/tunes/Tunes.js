@@ -8,7 +8,8 @@ import Tune from '../tunes/Tune';
     return (
       <Consumer>
         {value => {
-          console.log(value);
+          //console.log("tunes value");
+          //console.log(value);
           const { tunes_list, heading } = value;
 
           if(tunes_list === undefined || tunes_list.length === 0) {
