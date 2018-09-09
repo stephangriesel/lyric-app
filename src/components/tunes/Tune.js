@@ -13,7 +13,7 @@ const Tune = props => {
           <br />
           <strong><i className="fas fa-compact-disc"></i> Album</strong>: {tune.album_name}
           </p>
-          <Link to={`lyrics/track/${tune.track_id}`} className="btn btn-light btn-block">
+          <Link to={`lyrics/tune/${tune.track_id}`} className="btn btn-light btn-block">
           <i className="fas fa-chevron-right"></i> Lyrics
           
           </Link>
