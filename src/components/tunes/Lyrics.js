@@ -67,9 +67,9 @@ class Lyrics extends Component {
               {/* Fix date with npm package: moment & react-moment*/}
                   <strong>Release Year</strong>: <Moment format="YYYY">{track.first_release_date}</Moment>
               </li>
-              <li className="list-group-item">
+              {/*<li className="list-group-item">
                   <strong>Genre</strong>: {track.primary_genres.music_genre_list[0].music_genre.music_genre_name}
-              </li>
+      </li>*/}
               <li className="list-group-item">
               {/* Ternary Operator:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator */}
               <strong>Explicit: </strong>{track.explicit === 0 ? 'Nope' : 'Yep'}
