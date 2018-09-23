@@ -4,12 +4,12 @@ import axios from 'axios';
 const Context = React.createContext();
 
 const reducer = (state,action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'SEARCH_TRACKS':
       return {
         ...state,
-        track_list:action.payload,
-        heading:"Here is your tunes..."
+        tunes_list: action.payload,
+        heading: "Here's your tunes..."
       };
       default:
       return state;
@@ -19,9 +19,7 @@ const reducer = (state,action) => {
 
 export class Provider extends Component {
   state = {
-    tunes_list: [
-      
-    ],
+    tunes_list: [],
     heading: 'Top 10 Tunes',
     dispatch: action => this.setState(state => reducer(state,action))
   };

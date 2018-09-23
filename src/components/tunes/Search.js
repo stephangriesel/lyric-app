@@ -25,6 +25,8 @@ class Search extends Component {
           type: "SEARCH_TRACKS",
           payload: res.data.message.body.track_list
         });
+
+        
       })
       .catch(err => console.log(err));
   };
