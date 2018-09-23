@@ -49,7 +49,7 @@ class Lyrics extends Component {
       // Test: return <h1>Test</h1>;
       return (
         <React.Fragment>
-          <Link to="/" className="btn btn-light btn-sm mb-4">
+          <Link to="/" className="btn-back">
             Back
           </Link>
           <div className="card">

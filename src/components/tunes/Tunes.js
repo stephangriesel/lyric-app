@@ -18,7 +18,7 @@ import Tune from '../tunes/Tune';
             return (
               <React.Fragment>
                 <h3 className="text-center mb-4">{heading}</h3>
-                <div className="row">
+                <div className="grid">
                 {tunes_list.map(item => (
                   <Tune key={item.track.track_id} tune={item.track}/>
                 ))}
