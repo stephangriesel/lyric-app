@@ -1,5 +1,8 @@
-body {}
+body {
+    text-align: center;
+}
 
 .form-control {
     font-size:12px;
 }
+
