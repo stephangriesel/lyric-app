@@ -7,7 +7,7 @@ class Search extends Component {
     trackTitle: ""
   };
 
-  findTune = e => {
+  findTune = (dispatch,e) => {
     e.preventDefault();
 
     axios
@@ -21,6 +21,10 @@ class Search extends Component {
       .then(res => {
         console.log("search track title");
         console.log(res.data);
+        dispatch({
+          type: "SEARCH_TRACKS",
+          payload: res.data.message.body.track_list
+        });
       })
       .catch(err => console.log(err));
   };
@@ -34,7 +38,7 @@ class Search extends Component {
         {value => {
           console.log('dispatch value');
           console.log(value);
-          
+          const { dispatch } = value;
           return (
             <div className="card card-body mb-4 p-4">
               <h1 className="display-5 text-center">
@@ -42,7 +46,7 @@ class Search extends Component {
                 Search for my tune
               </h1>
               <p className="lead text-center">Sing a long.. find the lyrics</p>
-              <form onSubmit={this.findTune}>
+              <form onSubmit={this.findTune.bind(this,dispatch)}>
                 <div className="form-group">
                   <input
                     type="text"
