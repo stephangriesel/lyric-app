@@ -14,7 +14,7 @@ class Search extends Component {
       .get(
         `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_track=${
           this.state.trackTitle
-        }&page_size=3&page=1&s_track_rating=desc&apikey=${
+        }&page_size=20&page=1&s_track_rating=desc&apikey=${
           process.env.REACT_APP_MY_KEY
         }`
       )
