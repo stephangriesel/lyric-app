@@ -23,9 +23,12 @@ class Search extends Component {
         console.log(res.data);
         dispatch({
           type: "SEARCH_TRACKS",
+          // Send payload, result sent to context (line 32)
           payload: res.data.message.body.track_list
         });
 
+        // Clear search result
+        this.setState({trackTitle: ''});
         
       })
       .catch(err => console.log(err));
